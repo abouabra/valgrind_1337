@@ -2,8 +2,8 @@ cd && cd goinfre && mkdir docker && rm -rf ~/Library/Containers/com.docker.docke
 echo "CREATED DOCKER FOLDER"
 echo "LAUNCHING DOCKER"
 /usr/local/munki/launchapp -a "Docker"
-echo "WAITING 30 SEC FOR DOCKER TO LAUNCH"
-sleep 30
+echo "WAITING FOR DOCKER TO LAUNCH"
+sleep 20
 echo "BUILING DOCKER IMG"
 curl https://raw.githubusercontent.com/abouabra/valgrind_1337/master/Dockerfile -o Dockerfile
 docker build -t valgrind_1337 .
