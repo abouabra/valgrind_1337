@@ -2,5 +2,7 @@ cd && cd goinfre && mkdir docker && rm -rf ~/Library/Containers/com.docker.docke
 /usr/local/munki/launchapp -a "Docker"
 curl curl https://raw.githubusercontent.com/abouabra/valgrind_1337/master/Dockerfile -o Dockerfile
 docker build -t valgrind_1337 .
-valgrind 
-docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind_1337
+echo "alias valgrind='docker run -it --rm -v $1:/valgrind valgrind_1337'" >> ~/.zshrc
+echo "alias valgrind='docker run -it --rm -v $1:/valgrind valgrind_1337'" >> ~/.bashrc
+#docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind_1337
+# docker run -it --rm -v $1:/valgrind valgrind_1337
