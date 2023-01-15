@@ -10,6 +10,7 @@ RUN		apt-get update -y \
 				vim \
 				curl \
 				zsh \
-		&& chsh -s $(which zsh) \
+				bash-completion \
 		&& sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
+		&& echo "alias valgrind='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose'" >> ~/.zshrc
 
