@@ -9,7 +9,7 @@ curl https://raw.githubusercontent.com/abouabra/valgrind_1337/master/Dockerfile 
 docker build -t valgrind_1337 .
 echo "SETTING VARIABLES"
 echo "alias valgrind='docker run -it --rm -v $1:/valgrind valgrind_1337'" >> ~/.zshrc
-echo "alias valgrind='docker run -it --rm -v $1:/valgrind valgrind_1337'" >> ~/.bashrc
+source  ~/.zshrc
 #docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind_1337
 # docker run -it --rm -v $1:/valgrind valgrind_1337
 

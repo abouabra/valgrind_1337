@@ -11,7 +11,5 @@ RUN		apt-get update -y \
 				curl \
 				zsh \
 		&& chsh -s $(which zsh) \
-		&& sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" \
-		&& cd /valgrind
-
+		&& sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
 
