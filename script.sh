@@ -11,6 +11,6 @@ echo "SETTING VARIABLES"
 
 echo "alias val='eval \"docker run -it --rm -v \$PWD:/valgrind -w /valgrind --entrypoint zsh valgrind_1337\"'" >> ~/.zshrc
 
-source  ~/.zshrc
+# source  ~/.zshrc
 
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/abouabra/valgrind_1337/master/script.sh)"
