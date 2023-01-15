@@ -8,12 +8,9 @@ echo "BUILING DOCKER IMG"
 curl https://raw.githubusercontent.com/abouabra/valgrind_1337/master/Dockerfile -o Dockerfile
 docker build -t valgrind_1337 .
 echo "SETTING VARIABLES"
-echo "alias valgrind='docker run -it --rm -v $1:/valgrind valgrind_1337'" >> ~/.zshrc
+
+echo "alias val='eval \"docker run -it --rm -v \$PWD:/valgrind -w /valgrind --entrypoint zsh valgrind_1337\"'" >> ~/.zshrc
+
 source  ~/.zshrc
-#docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind_1337
-# docker run -it --rm -v $1:/valgrind valgrind_1337
-
-
-
 
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/abouabra/valgrind_1337/master/script.sh)"
